@@ -15,13 +15,19 @@
       <td> <%= artist.name %> </td>
       <!-- <td> <%= artist.description %> </td> -->
       <td>
-        <%=link_to 'Show', artist_path(artist), class: 'btn btn-default btn-xs' %>
+        <%=link_to 'Artist Bio', artist_path(artist), class: 'btn btn-default btn-xs' %>
+        <%= link_to 'Show Songs', artist_songs_path(artist), class: 'btn btn-success btn-xs' %>
         <%= link_to 'Edit', edit_artist_path(artist), class: 'btn btn-success btn-xs' %>
         <%= link_to 'Delete', artist, method: :delete, data: {confirm: "You sure homey?"}, class: 'btn btn-xs btn-danger' %>
+
       </td>
     </tr>
     <% end %>
 
     </table>
   </div>
+</div>
+
+<div>
+<%= link_to 'Add New Artist', new_artist_path, class: 'btn btn-default btn-xs' %>
 </div>

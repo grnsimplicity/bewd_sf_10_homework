@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
 
-  resources :artists
+  resources :artists do
+    resources :songs
+    # resources :reviews
+  end
 
-  resources :songs
+  # resources :songs
+
   #establish a custom route
 
 
