@@ -5,7 +5,9 @@ Rails.application.routes.draw do
     # resources :reviews
   end
 
-  # resources :songs
+  resources :songs do
+    resources :reviews
+  end
 
   #establish a custom route
 

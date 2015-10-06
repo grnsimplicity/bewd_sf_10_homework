@@ -1,9 +1,19 @@
-<div class="panel-body">
-  <%= simple_form_for @review do |f| %>
-    <%= f.input :rating, label: false, input_html: {placeholder: "Rating"}%>
-    <%= f.input :comment, label: false, as: :text, input_html: {placeholder: "Comment"} %>
-    <%= f.input :user, label: false, input_html: {placeholder: "User"} %>
-    <%= f.submit "Submit".html_safe, class: "btn btn-lg btn-danger"%>
-  <% end %>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="panel-body">
+      <%= simple_form_for [@artist, @review] do |f| %>
+        <%= f.input :rating, label: false, placeholder: "Rating"%>
+        <%= f.input :comment, label: false, placeholder: "Comments"%>
+        <%= f.input :user, label: false, placeholder: "User Name"%>
+        <%= f.submit "Submit".html_safe, class: "btn btn-danger btn-large" %>
+      <% end %>
+    </div>
   </div>
 </div>
